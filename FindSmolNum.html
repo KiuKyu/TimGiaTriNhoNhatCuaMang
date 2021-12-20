@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p id="pos1"></p>
+    <p id="pos2"></p>
+    <p id="pos3"></p>
+    <p id="pos4"></p>
+</body>
+<script>
+
+    //
+    // arr3: [];
+    //
+    // arr4: [0, 0, 0, 0, 0, 0];
+
+    function minNum(para) {
+        if (para.length == 0) {
+            return -1;
+        }
+        let min = para[0];
+        for (let i = 0; i < para.length; i++) {
+            if (min > para[i]) {
+                min = i;
+            }
+        }
+        return min;
+    }
+
+    let arg1 = [3, 5, 1, 8, -3, 7, 8];
+    let min1 = minNum(arg1);
+    if (min1 < 0) {
+        alert('Không có giá trị nào trong mảng này');
+    } else {
+        document.getElementById('pos1').innerHTML = 'Số nhỏ nhất trong mảng là ' + arg1[min1];
+    }
+
+    let arg2 = [7, 12, 6, 9, 20, 56, 89];
+    let min2 = minNum(arg2);
+    if (min2 < 0) {
+        alert('Không có giá trị nào trong mảng này');
+    } else {
+        document.getElementById('pos2').innerHTML = 'Số nhỏ nhất trong mảng là ' + arg2[min2];
+    }
+
+    let arg3 = [];
+    let min3 = minNum(arg3);
+    if (min3 < 0) {
+        alert('Không có giá trị nào trong mảng này');
+    } else {
+        document.getElementById('pos3').innerHTML = 'Số nhỏ nhất trong mảng là ' + arg3[min3];
+    }
+
+    let arg4 = [0, 0, 0, 0, 0, 0];
+    let min4 = minNum(arg4);
+    if (min4 < 0) {
+        alert('Không có giá trị nào trong mảng này');
+    } else {
+        document.getElementById('pos4').innerHTML = 'Số nhỏ nhất trong mảng là ' + arg4[min4];
+    }
+
+</script>
+</html>
